@@ -14,9 +14,19 @@ package exercises
 
 fun main(){
 
+    val initialUnit= "Celsius"
+    val finalUnit = "Fahrenheit"
+    val initialMeasurement:Double = 27.0
+
+    if(initialUnit == "Celsius"){
+        when(finalUnit){
+            "Fahrenheit" -> printFinalTemperature(initialMeasurement,initialUnit,finalUnit,{initialMeasurement:Double
+            -> (1.8*initialMeasurement)+32})
+            //(9/5) --> this integer number will be convert 1. That was the error. The program rounds 1, when the exact value of 9/5 in decimal is 1.8
+        }
+    }
+
 }
-
-
 
 fun printFinalTemperature(
     initialMeasurement: Double,
